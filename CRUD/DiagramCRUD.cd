@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CRUD.lib.File" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIEAAAAAQAAAAAAAAAAAAAAAACAAAACAAAAAAACAAAA=</HashCode>
+      <FileName>IFile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CRUD.lib.IFileWrite" BaseTypeListCollapsed="true">
+    <Position X="2.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIEAAAAAQAAAAAAAAAAAAAAAACAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>IFileWrite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CRUD.lib.FileRead">
+    <Position X="0.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIEAAAAAQAAAAAAAAAAAAAAAACAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>FileRead.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CRUD.lib.Temp">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEEAAAAAMAAAAAAAAAEAAAAAAACBAAA=</HashCode>
+      <FileName>Temp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
