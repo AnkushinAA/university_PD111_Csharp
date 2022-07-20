@@ -7,9 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Files\**" />
-    <EmbeddedResource Remove="Files\**" />
-    <None Remove="Files\**" />
+    <ProjectReference Include="..\Classes\Classes.Lib.csproj" />
+    <ProjectReference Include="..\CRUD\CRUD.lib.csproj" />
   </ItemGroup>
 
 </Project>

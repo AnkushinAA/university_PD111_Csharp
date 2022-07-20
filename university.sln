@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classes.Lib", "Classes\Clas
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CRUD.lib", "CRUD\CRUD.lib.csproj", "{42F65CA8-215C-4133-BAA4-CC1BFCD5083C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLI.lib", "CLI.lib\CLI.lib.csproj", "{8B0EE207-3DD9-4CD8-BFE2-33495D5D2C81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interface.lib", "CLI.lib\Interface.lib.csproj", "{8B0EE207-3DD9-4CD8-BFE2-33495D5D2C81}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
