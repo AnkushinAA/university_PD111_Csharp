@@ -4,7 +4,7 @@ namespace Interface.lib.CRUDInterface
 {
     internal class DismissTeacher : IDismiss
     {
-        public void Dismiss()
+        public void Dismiss(string firstName)
         {
             throw new NotImplementedException();
         }

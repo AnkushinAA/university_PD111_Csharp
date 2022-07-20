@@ -2,6 +2,6 @@
 {
     internal interface IDismiss
     {
-        public void Dismiss();
+        public void Dismiss(string firstName);
     }
 }

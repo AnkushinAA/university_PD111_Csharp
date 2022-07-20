@@ -1,4 +1,5 @@
 ﻿using CRUD.lib.CRUDInterface;
+using Interface.lib.CRUDInterface;
 
 namespace CLI.lib
 {
@@ -17,6 +18,11 @@ namespace CLI.lib
             do
             {
                 menuResult = menuStaff.PrintMenu();
+                if(menuResult == 4)
+                {
+                    methods[4]();
+                    return;
+                }
                 methods[menuResult]();
                 Console.WriteLine("Для продолжения нажмите любую клавишу");
                 _ = Console.ReadKey();
@@ -27,26 +33,51 @@ namespace CLI.lib
         {
             Console.WriteLine("Вносим данные о новом сотруднике");
             ICreate create = new CreateStaff();
+            create.Create();
         }
 
         private static void ChangeStaff()
         {
             Console.WriteLine("Вносим изменения в данные о сотруднике");
+            IChange change = new ChangeStaff();
+            Console.WriteLine("Ведите Фамилию:");
+            string firstName = Console.ReadLine();
+            Console.WriteLine("Ведите значение которое нужно изменить:");
+            string oldData = Console.ReadLine();
+            Console.WriteLine("Ведите значение которое нужно внести:");
+            string newData = Console.ReadLine();
+            change.Change(firstName, oldData, newData);
         }
 
         private static void ExpelStaff()
         {
             Console.WriteLine("увольняем сотрудника");
+            IDismiss dismiss = new DismissStaff();
+            Console.WriteLine("Ведите Фамилию:");
+            string str = Console.ReadLine();
+            dismiss.Dismiss(str);
         }
         private static void ShowStaff()
         {
-            Console.WriteLine("Выводим данные Сотрудника");
+            IShow show = new ShowStaff();
+            Console.WriteLine("1- Выводим данные сотрудника");
+            Console.WriteLine("2- Выводим данные всех сотрудников");
+            int n = Console.Read();
+            if (n == 1)
+            {
+                Console.WriteLine("Ведите Фамилию:");
+                string str = Console.ReadLine();                
+                show.ShowElement(str);
+            }
+            if(n == 2)
+            {
+                show.ShowAllElement();
+            }            
         }
 
         private static void AboveMenu()
         {
-            Console.WriteLine("переходим выше в меню");
-            Menu.Program();
+            Console.WriteLine("переходим выше в меню");            
         }
     }
 }

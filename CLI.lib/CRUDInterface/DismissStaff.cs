@@ -3,8 +3,8 @@
 namespace Interface.lib.CRUDInterface
 {
     internal class DismissStaff : IDismiss
-    {
-        public void Dismiss()
+    {        
+        public void Dismiss(string firstName)
         {
             throw new NotImplementedException();
         }

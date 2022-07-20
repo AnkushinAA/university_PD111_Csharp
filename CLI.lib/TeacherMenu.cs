@@ -1,4 +1,7 @@
-﻿namespace CLI.lib
+﻿using CRUD.lib.CRUDInterface;
+using Interface.lib.CRUDInterface;
+
+namespace CLI.lib
 {
     public class TeacherMenu: ConsoleMenu
     {
@@ -30,26 +33,52 @@
         private static void CreateTeacher()
         {
             Console.WriteLine("Вносим данные о новом учителе");
+            ICreate create = new CreateTeacher();
+            create.Create();
         }
 
         private static void ChangeTeacher()
         {
-            Console.WriteLine("Вносим изменения в данные о учителе");
+            Console.WriteLine("Вносим изменения в данные о учителе");           
+            IChange change = new ChangeTeacher();
+            Console.WriteLine("Ведите Фамилию:");
+            string firstName = Console.ReadLine();
+            Console.WriteLine("Ведите значение которое нужно изменить:");
+            string oldData = Console.ReadLine();
+            Console.WriteLine("Ведите значение которое нужно внести:");
+            string newData = Console.ReadLine();
+            change.Change(firstName, oldData, newData);
         }
 
         private static void ExpelTeacher()
         {
             Console.WriteLine("увольняем учителя");
+            IDismiss dismiss = new DismissTeacher();
+            Console.WriteLine("Ведите Фамилию:");
+            string str = Console.ReadLine();
+            dismiss.Dismiss(str);
         }
 
         private static void ShowTeacher()
         {
-            Console.WriteLine("Выводим данные учителя");
+            IShow show = new ShowStaff();
+            Console.WriteLine("1- Выводим данные учителя");
+            Console.WriteLine("2- Выводим данные всех учителей");
+            int n = Console.Read();
+            if (n == 1)
+            {
+                Console.WriteLine("Ведите Фамилию:");
+                string str = Console.ReadLine();
+                show.ShowElement(str);
+            }
+            if (n == 2)
+            {
+                show.ShowAllElement();
+            }
         }
         private static void AboveMenu()
         {
-            Console.WriteLine("переходим выше в меню");
-            Menu.Program();
+            Console.WriteLine("переходим выше в меню");            
         }
     }
 }

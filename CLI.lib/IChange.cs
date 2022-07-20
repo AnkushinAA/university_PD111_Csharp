@@ -2,6 +2,6 @@
 {
     internal interface IChange
     {
-        public void Change(string str);        
+        public void Change(string firstName, string oldData, string newData);        
     }
 }

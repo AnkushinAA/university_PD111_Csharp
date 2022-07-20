@@ -4,7 +4,7 @@ namespace Interface.lib.CRUDInterface
 {
     internal class ChangeStaff : IChange
     {
-        public void Change(string str)
+        public void Change(string firstName, string oldData, string newData)
         {
             throw new NotImplementedException();
         }
