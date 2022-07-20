@@ -16,6 +16,11 @@
             do
             {
                 menuResult = menuTeacher.PrintMenu();
+                if (menuResult == 4)
+                {
+                    methods[4]();
+                    return;
+                }
                 methods[menuResult]();
                 Console.WriteLine("Для продолжения нажмите любую клавишу");
                 _ = Console.ReadKey();

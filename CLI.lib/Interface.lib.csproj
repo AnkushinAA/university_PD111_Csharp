@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="D:\Tiach\Code\university_PD111_Csharp\Interface.lib\TeacherMenu.cs" Link="TeacherMenu.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Classes\Classes.Lib.csproj" />
     <ProjectReference Include="..\CRUD\CRUD.lib.csproj" />
   </ItemGroup>
