@@ -2,7 +2,7 @@
 {
     public interface IFile
     {
-        public void WriteFile();
-        public void ReadFile();
+        public abstract void WriteFile();
+        public abstract void ReadFile();
     }
 }

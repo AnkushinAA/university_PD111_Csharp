@@ -1,4 +1,5 @@
 ﻿using CRUD.lib;
+using Interface.lib.CRUDInterface.FileInterface;
 
 namespace CLI.lib
 {
@@ -10,7 +11,15 @@ namespace CLI.lib
         public Menu(string[] Items) : base(Items)
         {
         }
-        public static void Program()
+        public static void StartProgram()
+        {
+            IFile temp = new ReadPeopleFile();
+            IFile progress = new ReadProgressFile();
+            temp.WriteFile();
+            progress.WriteFile();
+            Program();
+        }
+        private static void Program()
         {
             if(tempStatus==false)
             {

@@ -6,11 +6,7 @@ namespace university
     {
         public static void Main()
         {
-            Menu.Program();
+            Menu.StartProgram();
         }
-
     }
-
-
-
 }

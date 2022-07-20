@@ -8,6 +8,7 @@ namespace CRUD.lib.CRUDInterface
         public void Dismiss(string firstName)
         {
             throw new NotImplementedException();
+            // TODO запись данных в файлы
         }
     }
 }

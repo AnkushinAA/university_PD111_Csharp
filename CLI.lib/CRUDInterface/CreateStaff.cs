@@ -8,6 +8,7 @@ namespace CRUD.lib.CRUDInterface
         public void Create()
         {
             throw new NotImplementedException();
+            // TODO запись данных в файлы
         }
     }
 }
