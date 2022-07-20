@@ -1,6 +1,22 @@
-﻿namespace Interface.lib.CRUDInterface
+﻿using CLI.lib;
+
+namespace Interface.lib.CRUDInterface
 {
-    internal class ShowStaff
+    internal class ShowStaff : IShow
     {
+        public (int idPerson, int id) FindIdElement(string firstName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ShowAllElement()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ShowElement(string firstName)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

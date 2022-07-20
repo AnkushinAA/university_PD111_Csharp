@@ -1,10 +1,12 @@
-﻿namespace CRUD.lib.CRUDInterface
+﻿using CLI.lib;
+
+namespace CRUD.lib.CRUDInterface
 {
-    public class CreateStudent: ICreate
+    public class CreateStudent : ICreate
     {
-        public override void Create()
+        public void Create()
         {
-            //TODO
+            throw new NotImplementedException();
         }
     }
 }

@@ -1,7 +1,12 @@
-﻿namespace CRUD.lib.CRUDInterface
+﻿using CLI.lib;
+
+namespace CRUD.lib.CRUDInterface
 {
-    public class CreateTeacher
+    public class CreateTeacher : ICreate
     {
-        public override void Create();
+        public void Create()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

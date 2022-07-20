@@ -1,12 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CLI.lib;
 
 namespace Interface.lib.CRUDInterface
 {
-    internal class ShowStudent
+    internal class ShowStudent : IShow
     {
+        public (int idPerson, int id) FindIdElement(string firstName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ShowAllElement()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ShowElement(string firstName)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

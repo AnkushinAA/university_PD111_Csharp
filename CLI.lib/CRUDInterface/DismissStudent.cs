@@ -1,8 +1,13 @@
 ﻿
+using CLI.lib;
+
 namespace CRUD.lib.CRUDInterface
 {
-    public class DismissStudent
+    public class DismissStudent : IDismiss
     {
-        public override void Dismiss();
+        public void Dismiss()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

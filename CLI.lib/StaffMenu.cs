@@ -1,4 +1,6 @@
-﻿namespace CLI.lib
+﻿using CRUD.lib.CRUDInterface;
+
+namespace CLI.lib
 {
     public class StaffMenu: ConsoleMenu
     {
@@ -24,6 +26,7 @@
         private static void CreateStaff()
         {
             Console.WriteLine("Вносим данные о новом сотруднике");
+            ICreate create = new CreateStaff();
         }
 
         private static void ChangeStaff()

@@ -1,6 +1,12 @@
-﻿namespace Interface.lib.CRUDInterface
+﻿using CLI.lib;
+
+namespace Interface.lib.CRUDInterface
 {
-    internal class ChangeTeacher
+    internal class ChangeTeacher : IChange
     {
+        public void Change(string str)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

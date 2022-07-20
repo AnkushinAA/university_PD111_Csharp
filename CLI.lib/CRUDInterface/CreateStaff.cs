@@ -1,8 +1,13 @@
 ﻿
+using CLI.lib;
+
 namespace CRUD.lib.CRUDInterface
 {
-    public class CreateStaff: ICreate
+    public class CreateStaff : ICreate
     {
-        public override void Create();
+        public void Create()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
