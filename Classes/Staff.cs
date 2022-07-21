@@ -6,12 +6,12 @@
         public string position;
         public bool isWork;
 
-        public Staff(string department, string position, bool isWork)
+        public Staff()
         {
-            this.department = department;
-            this.position = position;
-            this.isWork = isWork;
+            department = ConsoleEdit("отдел:");
+            position = ConsoleEdit("должность:");
+            isWork = true;
         }
-        public Staff() { }
+       
     }
 }

@@ -6,9 +6,9 @@
         public Progress progress;
         public bool isStudy;
 
-        public Student(string faculty)
+        public Student()
         {
-            this.faculty = faculty;
+            faculty = ConsoleEdit("факультет:");
             progress = new Progress();
             isStudy = true;
         }

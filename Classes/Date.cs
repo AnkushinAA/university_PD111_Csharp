@@ -5,13 +5,21 @@
         public int day;
         public int month;
         public int year;
+        public string data;
 
-        public Date(int day, int month, int year)
+        public Date()
         {
-            this.day = day;
-            this.month = month;
-            this.year = year;
+            data = ConsoleEdit("Введите дату в формате дд.мм.гггг");
+            string[] str = data.Split('.');
+            day = Convert.ToInt32(str[0]);
+            month = Convert.ToInt32(str[1]);
+            year = Convert.ToInt32(str[2]);            
         }
-        public Date() { }
+        protected string ConsoleEdit(string str)
+        {
+            Console.WriteLine(str);
+            string s = Console.ReadLine();
+            return s;
+        }
     }
 }

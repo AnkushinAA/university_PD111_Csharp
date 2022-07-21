@@ -4,9 +4,9 @@
     {
         public string subject;
 
-        public Teacher(string subject)
+        public Teacher()
         {
-            this.subject = subject;
+            subject = ConsoleEdit("предмет:");
         }
     }
 }

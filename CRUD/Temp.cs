@@ -6,7 +6,7 @@
         public static List<string> student { get; set; }
         public static List<string> teacher { get; set; }
         public static List<string> staff { get; set; }
-        public static List<string> matematicProgress { get; set; }
+        
        
 
     }

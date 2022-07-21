@@ -9,8 +9,16 @@
 
         public Person()
         {
+            firstName = ConsoleEdit("Ведите Имя:");
+            lastName = ConsoleEdit("Фамилию:");
             birthday = new Date();
-            contact = new Contact();
+            contact = new Contact();            
+        }
+        protected string ConsoleEdit(string str)
+        {
+            Console.WriteLine(str);
+            string s = Console.ReadLine();
+            return s;
         }
     }
 }
