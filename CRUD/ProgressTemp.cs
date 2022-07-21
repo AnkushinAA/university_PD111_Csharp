@@ -2,7 +2,6 @@
 {
     public class ProgressTemp
     {
-        public static List <string> matematic { get; set; }
-        public static List<string> history { get; set; }
+       public static Dictionary<string, List<string>> Temp = new Dictionary<string, List<string>>();
     }
 }

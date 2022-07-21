@@ -2,14 +2,12 @@
 {
     public class Student : Person
     {
-        public string faculty;
-        public Progress progress;
+        public string faculty;        
         public bool isStudy;
 
         public Student()
         {
-            faculty = ConsoleEdit("факультет:");
-            progress = new Progress();
+            faculty = ConsoleEdit("факультет:");           
             isStudy = true;
         }
     }
