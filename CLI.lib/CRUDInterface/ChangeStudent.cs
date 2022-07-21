@@ -6,10 +6,10 @@ namespace Interface.lib.CRUDInterface
 {
     internal class ChangeStudent : IChange, IProgress
     {
-        public void Change(string firstName, string oldData, string newData)
+        public void Change(string lastName, string oldData, string newData)
         {
             IShow show = new ShowStaff();
-            var id = show.FindIdElement(firstName);
+            var id = show.FindIdElement(lastName);
             List<string> tempList = new List<string>();
             foreach (string str in Temp.person)
             {
@@ -37,10 +37,10 @@ namespace Interface.lib.CRUDInterface
             Temp.student = tempList;
             // TODO запись данных в файлы
         }
-        public void AddProgress(string firstName, string subject)
+        public void AddProgress(string lastName, string subject)
         {
             IShow show = new ShowStaff();
-            var id = show.FindIdElement(firstName);           
+            var id = show.FindIdElement(lastName);           
             Console.WriteLine("Введите оценку");
             int mark = Console.Read();
             if (subject == "математика")

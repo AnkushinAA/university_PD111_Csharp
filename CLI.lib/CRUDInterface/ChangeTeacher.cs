@@ -5,10 +5,10 @@ namespace Interface.lib.CRUDInterface
 {
     internal class ChangeTeacher : IChange
     {
-        public void Change(string firstName, string oldData, string newData)
+        public void Change(string lastName, string oldData, string newData)
         {
             IShow show = new ShowTeacher();
-            var id = show.FindIdElement(firstName);
+            var id = show.FindIdElement(lastName);
             List<string> tempList = new List<string>();
             int status = 0;
             foreach (string str in Temp.teacher)
@@ -27,7 +27,7 @@ namespace Interface.lib.CRUDInterface
             if(status == 0)
             {
                 IChange change = new ChangeStaff();
-                change.Change(firstName,oldData,newData);
+                change.Change(lastName,oldData,newData);
             }
             WriteFile();
         }

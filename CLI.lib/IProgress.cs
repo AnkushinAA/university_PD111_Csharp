@@ -2,6 +2,6 @@
 {
     internal interface IProgress
     {
-        public void AddProgress(string firstName, string subject);
+        public void AddProgress(string lastName, string subject);
     }
 }

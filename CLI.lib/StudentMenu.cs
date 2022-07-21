@@ -44,21 +44,21 @@ namespace CLI.lib
             int n = Console.Read();
             IChange change = new ChangeStudent(); // ChangeStudent change = new ChangeStudent(); ???
             Console.WriteLine("Ведите Фамилию:");
-            string firstName = Console.ReadLine();
+            string lastName = Console.ReadLine();
             if (n == 1)
             {
                 Console.WriteLine("Ведите значение которое нужно изменить:");
                 string oldData = Console.ReadLine();
                 Console.WriteLine("Ведите значение которое нужно внести:");
                 string newData = Console.ReadLine();
-                change.Change(firstName, oldData, newData);
+                change.Change(lastName, oldData, newData);
             }
             if(n == 2)
             {
                 IProgress progress = new ChangeStudent(); // ???
                 Console.WriteLine("Ведите пердмет:");
                 string subject = Console.ReadLine();
-                progress.AddProgress(firstName, subject);
+                progress.AddProgress(lastName, subject);
             }                     
         }
 

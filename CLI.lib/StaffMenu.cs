@@ -41,12 +41,12 @@ namespace CLI.lib
             Console.WriteLine("Вносим изменения в данные о сотруднике");
             IChange change = new ChangeStaff();
             Console.WriteLine("Ведите Фамилию:");
-            string firstName = Console.ReadLine();
+            string lastName = Console.ReadLine();
             Console.WriteLine("Ведите значение которое нужно изменить:");
             string oldData = Console.ReadLine();
             Console.WriteLine("Ведите значение которое нужно внести:");
             string newData = Console.ReadLine();
-            change.Change(firstName, oldData, newData);
+            change.Change(lastName, oldData, newData);
         }
 
         private static void ExpelStaff()

@@ -42,18 +42,18 @@ namespace CLI.lib
             Console.WriteLine("Вносим изменения в данные о учителе");           
             IChange change = new ChangeTeacher();
             Console.WriteLine("Ведите Фамилию:");
-            string firstName = Console.ReadLine();
+            string lastName = Console.ReadLine();
             Console.WriteLine("Ведите значение которое нужно изменить:");
             string oldData = Console.ReadLine();
             Console.WriteLine("Ведите значение которое нужно внести:");
             string newData = Console.ReadLine();
-            change.Change(firstName, oldData, newData);
+            change.Change(lastName, oldData, newData);
         }
 
         private static void ExpelTeacher()
         {
             Console.WriteLine("увольняем учителя");
-            IDismiss dismiss = new DismissTeacher();
+            IDismiss dismiss = new DismissStaff();
             Console.WriteLine("Ведите Фамилию:");
             string str = Console.ReadLine();
             dismiss.Dismiss(str);
@@ -61,7 +61,7 @@ namespace CLI.lib
 
         private static void ShowTeacher()
         {
-            IShow show = new ShowStaff();
+            IShow show = new ShowTeacher();
             Console.WriteLine("1- Выводим данные учителя");
             Console.WriteLine("2- Выводим данные всех учителей");
             int n = Console.Read();

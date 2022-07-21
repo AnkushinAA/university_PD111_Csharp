@@ -5,10 +5,10 @@ namespace Interface.lib.CRUDInterface
 {
     internal class ChangeStaff : IChange
     {
-        public void Change(string firstName, string oldData, string newData)
+        public void Change(string lastName, string oldData, string newData)
         {
             IShow show = new ShowStaff();
-            var id = show.FindIdElement(firstName);
+            var id = show.FindIdElement(lastName);
             List<string> tempList = new List<string>();
             foreach (string str in Temp.person)
             {
