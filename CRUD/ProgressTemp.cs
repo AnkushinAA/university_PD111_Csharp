@@ -2,6 +2,6 @@
 {
     public class ProgressTemp
     {
-       public static Dictionary<string, List<string>> Temp = new Dictionary<string, List<string>>();
+       public static Dictionary<string, List<string>> progress = new Dictionary<string, List<string>>();
     }
 }
