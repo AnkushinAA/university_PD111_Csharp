@@ -13,8 +13,8 @@ namespace CLI.lib
         }
         public static void StartProgram()
         {
-            IFile temp = new ReadPeopleFile();
-            IFile progress = new ReadProgressFile();
+            IFile temp = new PeopleFile();
+            IFile progress = new ProgressFile();
             temp.WriteFile();
             progress.WriteFile();
             Program();

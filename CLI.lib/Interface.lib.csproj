@@ -15,4 +15,8 @@
     <ProjectReference Include="..\CRUD\CRUD.lib.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="CRUDInterface\FileInterface\Files\" />
+  </ItemGroup>
+
 </Project>

@@ -1,4 +1,5 @@
-﻿using CRUD.lib.CRUDInterface;
+﻿using Classes.Lib;
+using CRUD.lib.CRUDInterface;
 using Interface.lib;
 using Interface.lib.CRUDInterface;
 
@@ -56,10 +57,21 @@ namespace CLI.lib
             if(n == 2)
             {
                 IProgress progress = new ChangeStudent(); // ???
-                Console.WriteLine("Ведите пердмет:");
-                string subject = Console.ReadLine();
-                progress.AddProgress(lastName, subject);
+                Console.WriteLine("Ведите пердмет:");               
+                progress.AddProgress(lastName, SubjectChoise());
             }                     
+        }
+
+        private static int SubjectChoise()
+        {
+            int i;
+            Console.WriteLine("Ведите номер дисциплины:");
+            for (i=0; i<Subject.subject.Length; i++)
+            {               
+                Console.WriteLine($"{i} - {Subject.subject[i]}");
+            }
+            i = Console.Read();
+            return i;
         }
 
         private static void ExpelStudent()
