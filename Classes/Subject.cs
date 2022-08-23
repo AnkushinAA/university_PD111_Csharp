@@ -2,6 +2,6 @@
 {
     public class Subject
     {
-        protected readonly static string[] subject = { "matematic", "history" };
+        public readonly static string[] subject = { "matematic", "history" };
     }
 }

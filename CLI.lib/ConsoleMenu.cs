@@ -30,6 +30,7 @@
                         Console.WriteLine(menuItems[i]);
                     }
                 }
+                
                 key = Console.ReadKey();
                 if (key.Key == ConsoleKey.UpArrow)
                 {

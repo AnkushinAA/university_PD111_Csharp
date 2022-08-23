@@ -12,7 +12,7 @@ namespace Interface.lib
         public static void MenuTeacher()
         {
             string[] items = { "Новый учитель", "Изменить данные учителя", "уволить учителя", "вернуться в предыдущее меню" };
-            method[] methods = new method[] { CreateTeacher, ChangeTeacher, ExpelTeacher, ShowTeacher, AboveMenu };
+            method[] methods = new method[] { CreateTeacher, ChangeTeacher, ExpelTeacher, ShowTeacher};
             ConsoleMenu menuTeacher = new(items);
             int menuResult;
             do
@@ -61,23 +61,19 @@ namespace Interface.lib
         private static void ShowTeacher()
         {
             IShow show = new ShowTeacher();
-            Console.WriteLine("1- Выводим данные учителя");
-            Console.WriteLine("2- Выводим данные всех учителей");
-            int n = Console.Read();
-            if (n == 1)
+            string[] items = { "Выводим данные учителя", "Выводим данные всех учителей" };
+            ConsoleMenu menuShowTeacher = new ConsoleMenu(items);
+            int n = menuShowTeacher.PrintMenu();
+            if (n == 0)
             {
                 Console.WriteLine("Ведите Фамилию:");
                 string str = Console.ReadLine();
                 show.ShowElement(str);
             }
-            if (n == 2)
+            if (n == 1)
             {
                 show.ShowAllElement();
             }
-        }
-        private static void AboveMenu()
-        {
-            Console.WriteLine("переходим выше в меню");
-        }
+        }       
     }
 }

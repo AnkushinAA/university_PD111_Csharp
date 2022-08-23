@@ -11,7 +11,7 @@ namespace Interface.lib
         public static void MenuStaff()
         {
             string[] items = { "Новый сотрудник", "Изменить данные сотрудника", "уволить сотрудника", "вернуться в предыдущее меню" };
-            method[] methods = new method[] { CreateStaff, ChangeStaff, ExpelStaff, ShowStaff, AboveMenu };
+            method[] methods = new method[] { CreateStaff, ChangeStaff, ExpelStaff, ShowStaff};
             ConsoleMenu menuStaff = new(items);
             int menuResult;
             do
@@ -59,24 +59,19 @@ namespace Interface.lib
         private static void ShowStaff()
         {
             IShow show = new ShowStaff();
-            Console.WriteLine("1- Выводим данные сотрудника");
-            Console.WriteLine("2- Выводим данные всех сотрудников");
-            int n = Console.Read();
-            if (n == 1)
+            string[] items = { "Выводим данные сотрудника", "Выводим данные всех сотрудников" };
+            ConsoleMenu menuShowStaff = new ConsoleMenu(items);
+            int n = menuShowStaff.PrintMenu();
+            if (n == 0)
             {
                 Console.WriteLine("Ведите Фамилию:");
                 string str = Console.ReadLine();
                 show.ShowElement(str);
             }
-            if (n == 2)
+            if (n == 1)
             {
                 show.ShowAllElement();
             }
-        }
-
-        private static void AboveMenu()
-        {
-            Console.WriteLine("переходим выше в меню");
-        }
+        }       
     }
 }

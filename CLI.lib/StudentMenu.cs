@@ -11,8 +11,8 @@ namespace Interface.lib
         public delegate void method();
         public static void MenuStudent()
         {
-            string[] items = { "Новый студент", "Изменить данные студента", "Отчислить студента", "вернуться в предыдущее меню" };
-            method[] methods = new method[] { CreateStudent, ChangeStudent, ExpelStudent, ShowStudent, AboveMenu };
+            string[] items = { "Новый студент", "Изменить данные студента", "Отчислить студента", "Показать данные студента", "вернуться в предыдущее меню" };
+            method[] methods = new method[] { CreateStudent, ChangeStudent, ExpelStudent, ShowStudent};
             ConsoleMenu menuStudent = new(items);
             int menuResult;
             do
@@ -38,13 +38,13 @@ namespace Interface.lib
 
         private static void ChangeStudent()
         {
-            Console.WriteLine("1- Вносим изменения в данные о студенте");
-            Console.WriteLine("2- Вносим изменения в оценочную ведомость");
-            int n = Console.Read();
+            string[] items = { "Вносим изменения в данные о студенте", "Вносим изменения в оценочную ведомость" };
+            ConsoleMenu menuStudent = new(items);
+            int n = menuStudent.PrintMenu();
             IChange change = new ChangeStudent(); // ChangeStudent change = new ChangeStudent(); ???
             Console.WriteLine("Ведите Фамилию:");
             string lastName = Console.ReadLine();
-            if (n == 1)
+            if (n == 0)
             {
                 Console.WriteLine("Ведите значение которое нужно изменить:");
                 string oldData = Console.ReadLine();
@@ -52,7 +52,7 @@ namespace Interface.lib
                 string newData = Console.ReadLine();
                 change.Change(lastName, oldData, newData);
             }
-            if (n == 2)
+            if (n == 1)
             {
                 IProgress progress = new ChangeStudent(); // ???
                 Console.WriteLine("Ведите пердмет:");
@@ -62,14 +62,16 @@ namespace Interface.lib
 
         private static int SubjectChoise()
         {
-            int i;
-            Console.WriteLine("Ведите номер дисциплины:");
-            for (i = 0; i < Subject.subject.Length; i++)
+            int i=0;
+            string[] items = new string[Subject.subject.Length];
+            Console.WriteLine("Выберите дисциплину:");
+            foreach ( string str in Subject.subject)
             {
-                Console.WriteLine($"{i} - {Subject.subject[i]}");
+                items[i] = str;
+                i++;
             }
-            i = Console.Read();
-            return i;
+            ConsoleMenu menuSubject = new(items);
+            return menuSubject.PrintMenu();
         }
 
         private static void ExpelStudent()
@@ -83,24 +85,19 @@ namespace Interface.lib
         private static void ShowStudent()
         {
             IShow show = new ShowStudent();
-            Console.WriteLine("1- Выводим данные студента");
-            Console.WriteLine("2- Выводим данные всех студентов");
-            int n = Console.Read();
-            if (n == 1)
+            string[] items = { "Выводим данные студента", "Выводим данные всех студентов" };
+            ConsoleMenu menuShowStudent = new(items);
+            int n = menuShowStudent.PrintMenu();
+            if (n == 0)
             {
                 Console.WriteLine("Ведите Фамилию:");
                 string str = Console.ReadLine();
                 show.ShowElement(str);
             }
-            if (n == 2)
+            if (n == 1)
             {
                 show.ShowAllElement();
             }
-        }
-
-        private static void AboveMenu()
-        {
-            Console.WriteLine("переходим выше в меню");
-        }
+        }       
     }
 }

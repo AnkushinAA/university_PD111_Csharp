@@ -14,8 +14,8 @@ namespace Interface.lib
         {
             IFile temp = new PeopleFile();
             IFile progress = new ProgressFile();
-            temp.WriteFile();
-            progress.WriteFile();
+            temp.ReadFile();
+            progress.ReadFile();
             Program();
         }
         private static void Program()

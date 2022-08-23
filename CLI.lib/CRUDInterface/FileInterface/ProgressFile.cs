@@ -12,7 +12,7 @@ namespace FileInterface
             for (int i = 0; i < Subject.subject.Length; i++)
             {
                 d.Add(Subject.subject[i], new List<string>());
-                var file = new StreamReader(names.fileNameProgress[i]);
+                StreamReader file = new StreamReader(new FileStream (names.fileNameProgress[i], FileMode.OpenOrCreate));
                 string str = file.ReadToEnd();
                 string[] mass = str.Split("|");
                 foreach (string s in mass)

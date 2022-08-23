@@ -15,12 +15,13 @@ namespace FileInterface
         }
         private void Read(List<string> list, string name)
         {
-            StreamReader file = new(name);
+            StreamReader file = new StreamReader(new FileStream (name, FileMode.OpenOrCreate));
             string temp = file.ReadToEnd();
             file.Close();
             string[] mass = temp.Split("\r\n");
             foreach (string str in mass)
             {
+                if (list==null) list=new List<string>();
                 list.Add(str);
             }
         }
