@@ -1,12 +1,11 @@
-﻿using CRUD.lib;
-using Interface.lib.CRUDInterface.FileInterface;
+﻿using FileInterface;
 
-namespace CLI.lib
+namespace Interface.lib
 {
-    public class Menu: ConsoleMenu
+    public class Menu : ConsoleMenu
     {
         public delegate void method();
-        public static bool tempStatus=false;
+        public static bool tempStatus = false;
 
         public Menu(string[] Items) : base(Items)
         {
@@ -21,10 +20,9 @@ namespace CLI.lib
         }
         private static void Program()
         {
-            if(tempStatus==false)
+            if (tempStatus == false)
             {
-                Temp temp;
-                tempStatus=true;
+                tempStatus = true;
             }
             string[] items = { "Меню Студентов", "Меню Учителей", "Меню Сотрудников", "Выход" };
             method[] methods = new method[] { MethodStudent, MethodTeacher, MethodStaff, Exit };

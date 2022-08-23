@@ -1,4 +1,4 @@
-﻿using CLI.lib;
+﻿using Interface.lib;
 
 namespace university
 {

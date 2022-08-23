@@ -1,4 +1,4 @@
-﻿namespace CLI.lib
+﻿namespace Interface.lib
 {
     internal interface IDismiss
     {

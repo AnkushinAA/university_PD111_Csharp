@@ -1,7 +1,7 @@
-﻿using CLI.lib;
-using CRUD.lib;
+﻿using Classes.Lib;
+using Interface.lib;
 
-namespace Interface.lib.CRUDInterface
+namespace CRUDInterface
 {
     internal class DismissStaff : IDismiss
     {        

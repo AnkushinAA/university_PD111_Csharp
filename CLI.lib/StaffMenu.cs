@@ -1,9 +1,8 @@
-﻿using CRUD.lib.CRUDInterface;
-using Interface.lib.CRUDInterface;
+﻿using CRUDInterface;
 
-namespace CLI.lib
+namespace Interface.lib
 {
-    public class StaffMenu: ConsoleMenu
+    public class StaffMenu : ConsoleMenu
     {
         public StaffMenu(string[] Items) : base(Items)
         {
@@ -18,7 +17,7 @@ namespace CLI.lib
             do
             {
                 menuResult = menuStaff.PrintMenu();
-                if(menuResult == 4)
+                if (menuResult == 4)
                 {
                     methods[4]();
                     return;
@@ -66,18 +65,18 @@ namespace CLI.lib
             if (n == 1)
             {
                 Console.WriteLine("Ведите Фамилию:");
-                string str = Console.ReadLine();                
+                string str = Console.ReadLine();
                 show.ShowElement(str);
             }
-            if(n == 2)
+            if (n == 2)
             {
                 show.ShowAllElement();
-            }            
+            }
         }
 
         private static void AboveMenu()
         {
-            Console.WriteLine("переходим выше в меню");            
+            Console.WriteLine("переходим выше в меню");
         }
     }
 }

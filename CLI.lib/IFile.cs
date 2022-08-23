@@ -1,4 +1,4 @@
-﻿namespace CLI.lib
+﻿namespace Interface
 {
     public interface IFile
     {        

@@ -1,8 +1,7 @@
 ﻿using Classes.Lib;
-using CLI.lib;
-using CRUD.lib;
+using Interface;
 
-namespace Interface.lib.CRUDInterface.FileInterface
+namespace FileInterface
 {
     internal class ProgressFile : IFile
     {

@@ -1,4 +1,4 @@
-﻿namespace CLI.lib
+﻿namespace Interface.lib
 {
     public class ConsoleMenu
     {

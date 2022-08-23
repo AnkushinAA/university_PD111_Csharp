@@ -1,9 +1,7 @@
 ﻿using Classes.Lib;
-using CRUD.lib.CRUDInterface;
-using Interface.lib;
-using Interface.lib.CRUDInterface;
+using CRUDInterface;
 
-namespace CLI.lib
+namespace Interface.lib
 {
     public class StudentMenu : ConsoleMenu
     {
@@ -54,20 +52,20 @@ namespace CLI.lib
                 string newData = Console.ReadLine();
                 change.Change(lastName, oldData, newData);
             }
-            if(n == 2)
+            if (n == 2)
             {
                 IProgress progress = new ChangeStudent(); // ???
-                Console.WriteLine("Ведите пердмет:");               
+                Console.WriteLine("Ведите пердмет:");
                 progress.AddProgress(lastName, SubjectChoise());
-            }                     
+            }
         }
 
         private static int SubjectChoise()
         {
             int i;
             Console.WriteLine("Ведите номер дисциплины:");
-            for (i=0; i<Subject.subject.Length; i++)
-            {               
+            for (i = 0; i < Subject.subject.Length; i++)
+            {
                 Console.WriteLine($"{i} - {Subject.subject[i]}");
             }
             i = Console.Read();
@@ -83,7 +81,7 @@ namespace CLI.lib
             dismiss.Dismiss(str);
         }
         private static void ShowStudent()
-        {            
+        {
             IShow show = new ShowStudent();
             Console.WriteLine("1- Выводим данные студента");
             Console.WriteLine("2- Выводим данные всех студентов");
@@ -102,7 +100,7 @@ namespace CLI.lib
 
         private static void AboveMenu()
         {
-            Console.WriteLine("переходим выше в меню");           
+            Console.WriteLine("переходим выше в меню");
         }
     }
 }

@@ -1,17 +1,17 @@
 ﻿using Classes.Lib;
-using CLI.lib;
+using Interface.lib;
 
-namespace CRUD.lib.CRUDInterface
+namespace CRUDInterface
 {
     public class CreateStudent : ICreate
     {
         public void Create()
         {
-            var student = new Student();
+            Student student = new();
             int idPerson = Maxid(Temp.person);
             int idStudent = Maxid(Temp.student);
-            string strPerson = ($"{idPerson}|{student.lastName}|{student.firstName}|{student.contact.phone}|{student.contact.adress}");
-            string strStaff = ($"{idStudent}|{idPerson}|{student.faculty}|{student.isStudy}");
+            string strPerson = $"{idPerson}|{student.lastName}|{student.firstName}|{student.contact.phone}|{student.contact.adress}";
+            string strStaff = $"{idStudent}|{idPerson}|{student.faculty}|{student.isStudy}";
             Temp.person.Add(strPerson);
             Temp.staff.Add(strStaff);
             CreateProgress(idStudent);
@@ -19,7 +19,7 @@ namespace CRUD.lib.CRUDInterface
         }
         private void CreateProgress(int id)
         {
-            foreach (var student in ProgressTemp.Temp)
+            foreach (KeyValuePair<string, List<string>> student in ProgressTemp.progress)
             {
                 student.Value.Add($"{Convert.ToString(id)}|");
             }
@@ -27,11 +27,11 @@ namespace CRUD.lib.CRUDInterface
         private int Maxid(List<string> list)
         {
             IEnumerable<int> temp = null;
-            foreach (var str in list)
+            foreach (string str in list)
             {
-                temp.Append(Convert.ToInt32(str.Substring(0, str.IndexOf("|"))));
+                _ = temp.Append(Convert.ToInt32(str[..str.IndexOf("|")]));
             }
-            var id = temp.Max() + 1;
+            int id = temp.Max() + 1;
             return id;
         }
     }

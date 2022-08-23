@@ -1,13 +1,13 @@
-﻿using CLI.lib;
-using CRUD.lib;
+﻿using Classes.Lib;
+using Interface;
 
-namespace Interface.lib.CRUDInterface.FileInterface
+namespace FileInterface
 {
     internal class PeopleFile : IFile
     {
         public void ReadFile()
         {
-            FileNames names = new FileNames();
+            FileNames names = new();
             Read(Temp.person, names.fileNamePeople[0]);
             Read(Temp.student, names.fileNamePeople[1]);
             Read(Temp.staff, names.fileNamePeople[2]);
@@ -15,11 +15,11 @@ namespace Interface.lib.CRUDInterface.FileInterface
         }
         private void Read(List<string> list, string name)
         {
-            var file = new StreamReader(name);
+            StreamReader file = new(name);
             string temp = file.ReadToEnd();
             file.Close();
             string[] mass = temp.Split("\r\n");
-            foreach (var str in mass)
+            foreach (string str in mass)
             {
                 list.Add(str);
             }
@@ -27,16 +27,16 @@ namespace Interface.lib.CRUDInterface.FileInterface
 
         public void WriteFile()
         {
-            FileNames names = new FileNames();
+            FileNames names = new();
             Write(Temp.person, names.fileNamePeople[0]);
             Write(Temp.student, names.fileNamePeople[1]);
             Write(Temp.staff, names.fileNamePeople[2]);
             Write(Temp.teacher, names.fileNamePeople[3]);
         }
-        private void Write(List<string> list,string name)
+        private void Write(List<string> list, string name)
         {
-            var file = new StreamWriter(name);
-            foreach(var str in list)
+            StreamWriter file = new(name);
+            foreach (string str in list)
             {
                 file.WriteLine(str);
             }

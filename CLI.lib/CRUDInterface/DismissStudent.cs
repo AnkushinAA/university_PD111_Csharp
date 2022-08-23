@@ -1,8 +1,7 @@
-﻿
-using CLI.lib;
-using Interface.lib.CRUDInterface;
+﻿using Classes.Lib;
+using Interface.lib;
 
-namespace CRUD.lib.CRUDInterface
+namespace CRUDInterface
 {
     public class DismissStudent : IDismiss
     {

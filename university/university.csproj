@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Classes\Classes.Lib.csproj" />
     <ProjectReference Include="..\CLI.lib\Interface.lib.csproj" />
   </ItemGroup>
 

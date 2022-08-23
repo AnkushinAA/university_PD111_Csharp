@@ -12,6 +12,6 @@
             position = ConsoleEdit("должность:");
             isWork = true;
         }
-       
+
     }
 }

@@ -1,9 +1,8 @@
-﻿using CRUD.lib.CRUDInterface;
-using Interface.lib.CRUDInterface;
+﻿using CRUDInterface;
 
-namespace CLI.lib
+namespace Interface.lib
 {
-    public class TeacherMenu: ConsoleMenu
+    public class TeacherMenu : ConsoleMenu
     {
         public TeacherMenu(string[] Items) : base(Items)
         {
@@ -39,7 +38,7 @@ namespace CLI.lib
 
         private static void ChangeTeacher()
         {
-            Console.WriteLine("Вносим изменения в данные о учителе");           
+            Console.WriteLine("Вносим изменения в данные о учителе");
             IChange change = new ChangeTeacher();
             Console.WriteLine("Ведите Фамилию:");
             string lastName = Console.ReadLine();
@@ -78,7 +77,7 @@ namespace CLI.lib
         }
         private static void AboveMenu()
         {
-            Console.WriteLine("переходим выше в меню");            
+            Console.WriteLine("переходим выше в меню");
         }
     }
 }

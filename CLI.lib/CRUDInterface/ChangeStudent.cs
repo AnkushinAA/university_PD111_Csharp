@@ -1,8 +1,7 @@
 ﻿using Classes.Lib;
-using CLI.lib;
-using CRUD.lib;
+using Interface.lib;
 
-namespace Interface.lib.CRUDInterface
+namespace CRUDInterface
 {
     internal class ChangeStudent : IChange, IProgress
     {

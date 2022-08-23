@@ -1,7 +1,7 @@
 ﻿using Classes.Lib;
-using CLI.lib;
+using Interface.lib;
 
-namespace CRUD.lib.CRUDInterface
+namespace CRUDInterface
 {
     public class CreateTeacher : ICreate
     {

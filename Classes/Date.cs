@@ -14,7 +14,7 @@
             day = Convert.ToInt32(str[0]);
             month = Convert.ToInt32(str[1]);
             year = Convert.ToInt32(str[2]);
-            data = ($"{day}|{month}|{year}");
+            data = $"{day}|{month}|{year}";
         }
         protected string ConsoleEdit(string str)
         {

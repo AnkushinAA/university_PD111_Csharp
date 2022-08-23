@@ -7,9 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "university", "university\un
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classes.Lib", "Classes\Classes.Lib.csproj", "{B2E6E644-6DB3-4DA4-BDF8-881FED90A501}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CRUD.lib", "CRUD\CRUD.lib.csproj", "{42F65CA8-215C-4133-BAA4-CC1BFCD5083C}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interface.lib", "CLI.lib\Interface.lib.csproj", "{8B0EE207-3DD9-4CD8-BFE2-33495D5D2C81}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{54031EB5-FEDE-46AA-BA36-05A7D8781C1D}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +28,6 @@ Global
 		{B2E6E644-6DB3-4DA4-BDF8-881FED90A501}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2E6E644-6DB3-4DA4-BDF8-881FED90A501}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2E6E644-6DB3-4DA4-BDF8-881FED90A501}.Release|Any CPU.Build.0 = Release|Any CPU
-		{42F65CA8-215C-4133-BAA4-CC1BFCD5083C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{42F65CA8-215C-4133-BAA4-CC1BFCD5083C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{42F65CA8-215C-4133-BAA4-CC1BFCD5083C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{42F65CA8-215C-4133-BAA4-CC1BFCD5083C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8B0EE207-3DD9-4CD8-BFE2-33495D5D2C81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8B0EE207-3DD9-4CD8-BFE2-33495D5D2C81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B0EE207-3DD9-4CD8-BFE2-33495D5D2C81}.Release|Any CPU.ActiveCfg = Release|Any CPU
